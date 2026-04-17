@@ -53,7 +53,7 @@ export default function Navbar() {
                 >
                     {/* LOGO */}
                     <Link href="#" className="group">
-                        <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-gradient-to-br from-blue-500 to-cyan-500 transition group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-blue-500/40">
+                        <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-linear-to-br from-blue-500 to-cyan-500 transition group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-blue-500/40">
                             <span className="text-white font-bold">Y</span>
                         </div>
                     </Link>
@@ -121,7 +121,7 @@ function NavItem({ label, href }: NavLink) {
             className="relative px-4 py-2 text-sm text-white/80 hover:text-white group"
         >
             {label}
-            <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-gradient-to-r from-blue-500 to-cyan-500 transition-all group-hover:w-full" />
+            <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-linear-to-r from-blue-500 to-cyan-500 transition-all group-hover:w-full" />
         </Link>
     )
 }
@@ -141,7 +141,7 @@ function Button({
                 'px-4 py-2 rounded-lg text-sm font-medium transition-all',
                 full && 'w-full',
                 variant === 'primary'
-                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:shadow-lg hover:shadow-blue-500/30'
+                    ? 'bg-linear-to-r from-blue-600 to-cyan-600 text-white hover:shadow-lg hover:shadow-blue-500/30'
                     : 'text-white/80 border border-white/20 hover:border-white/40 hover:bg-white/5'
             )}
         >
