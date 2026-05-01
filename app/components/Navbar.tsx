@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
 
@@ -45,7 +46,7 @@ export default function Navbar() {
             >
                 <div
                     className={clsx(
-                        'rounded-2xl px-6 py-3 flex items-center gap-6 border transition-all duration-300',
+                        'rounded-2xl px-6 py-2 flex items-center gap-6 border transition-all duration-300',
                         isScrolled
                             ? 'bg-black/40 backdrop-blur-md border-white/10 shadow-xl'
                             : 'bg-black/20 backdrop-blur-sm border-white/5'
@@ -53,8 +54,8 @@ export default function Navbar() {
                 >
                     {/* LOGO */}
                     <Link href="#" className="group">
-                        <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-linear-to-br from-blue-500 to-cyan-500 transition group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-blue-500/40">
-                            <span className="text-white font-bold">Y</span>
+                        <div className='flex items-center justify-center'>
+                            <Image src="/icono.png" alt="" width={65} height={65} />
                         </div>
                     </Link>
 

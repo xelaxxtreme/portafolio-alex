@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const Footer = () => {
     return (
@@ -16,11 +17,9 @@ const Footer = () => {
                     <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-6 gap-8 md:gap-12">
 
                         <div className="lg:col-span-3 space-y-6">
-                            <a href="https://prebuiltui.com" className="block">
-                                <svg width="157" height="40" viewBox="0 0 157 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="m8.75 11.3 6.75 3.884 6.75-3.885M8.75 34.58v-7.755L2 22.939m27 0-6.75 3.885v7.754M2.405 15.408 15.5 22.954l13.095-7.546M15.5 38V22.939M29 28.915V16.962a2.98 2.98 0 0 0-1.5-2.585L17 8.4a3.01 3.01 0 0 0-3 0L3.5 14.377A3 3 0 0 0 2 16.962v11.953A2.98 2.98 0 0 0 3.5 31.5L14 37.477a3.01 3.01 0 0 0 3 0L27.5 31.5a3 3 0 0 0 1.5-2.585" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </a>
+                            <div className='flex '>
+                                <Image src="/icono.png" alt="" width={150} height={150} />
+                            </div>
                             <p className="text-sm/6 text-neutral-300 max-w-96">PrebuiltUI helps you build faster by transforming your design vision into fully functional, production-ready UI components.</p>
                             <div className="flex gap-5 md:gap-6 order-1 md:order-2">
                                 {/* X (Twitter) */}
