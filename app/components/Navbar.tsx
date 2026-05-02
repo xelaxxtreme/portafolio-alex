@@ -11,10 +11,9 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-    { label: 'Inicio', href: '#home' },
-    { label: 'Proyectos', href: '#projects' },
     { label: 'Sobre mí', href: '#about' },
-    { label: 'Skills', href: '#skills' },
+    { label: 'Skills', href: '#skilss' },
+    { label: 'Proyectos', href: '#projects' },
     { label: 'Contacto', href: '#contact' },
 ]
 
@@ -65,6 +64,7 @@ export default function Navbar() {
                             <NavItem key={link.href} {...link} />
                         ))}
                     </div>
+
 
                     {/* CTA */}
                     <div className="hidden md:flex gap-2 ml-auto">

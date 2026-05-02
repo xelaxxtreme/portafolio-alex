@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"
 
 const Background = () => {
     return (
@@ -8,13 +8,15 @@ const Background = () => {
 
             {/* Glow 1 */}
             <motion.div
-                className="absolute w-[500px] h-[500px] bg-purple-500 rounded-full blur-[150px] opacity-30"
+                className="absolute w-[500px] h-[500px] bg-purple-400 rounded-full blur-[150px] opacity-30"
                 animate={{
-                    x: [0, 200, -100, 0],
-                    y: [0, -150, 100, 0],
+                    x: [0, 250, -180, 100, -50, 0],
+                    y: [0, -200, 150, -100, 80, 0],
+                    rotate: [0, 15, -10, 20, -5, 0],
+                    scale: [1, 1.1, 0.9, 1.05, 1, 1],
                 }}
                 transition={{
-                    duration: 25,
+                    duration: 10, // más rápido
                     repeat: Infinity,
                     ease: "easeInOut",
                 }}
@@ -22,46 +24,51 @@ const Background = () => {
 
             {/* Glow 2 */}
             <motion.div
-                className="absolute w-[400px] h-[400px] bg-cyan-400 rounded-full blur-[120px] opacity-30"
+                className="absolute w-[400px] h-[400px] bg-cyan-300 rounded-full blur-[120px] opacity-30"
                 animate={{
-                    x: [200, -150, 100, 200],
-                    y: [-100, 150, -50, -100],
+                    x: [200, -180, 120, -100, 80, 200],
+                    y: [-100, 180, -80, 120, -60, -100],
+                    rotate: [0, -10, 8, -15, 5, 0],
+                    scale: [1, 1.05, 0.95, 1.1, 1, 1],
                 }}
                 transition={{
-                    duration: 30,
+                    duration: 12, // ligeramente más lento para contraste
                     repeat: Infinity,
                     ease: "easeInOut",
                 }}
             />
 
-            {/* Glow 3 */}
+            {/* Otros glows */}
             <motion.div
-                className="absolute w-[300px] h-[300px] bg-pink-500 rounded-full blur-[100px] opacity-20"
+                className="absolute w-[500px] h-[500px] bg-pink-400 rounded-full blur-[100px] opacity-20"
                 animate={{
-                    x: [-100, 100, -50, -100],
-                    y: [100, -100, 50, 100],
+                    x: [200, -180, 120, -100, 80, 200],
+                    y: [-100, 180, -80, 120, -60, -100],
+                    rotate: [0, -10, 8, -15, 5, 0],
+                    scale: [1, 1.05, 0.95, 1.1, 1, 1],
                 }}
                 transition={{
-                    duration: 35,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                }}
-            />
-            <motion.div
-                className="absolute right-[-100px] top-1/2 w-[350px] h-[350px] bg-indigo-400 rounded-full blur-[130px] opacity-25"
-                animate={{
-                    x: [0, -80, 40, 0],
-                    y: [-50, 50, -30, -50],
-                }}
-                transition={{
-                    duration: 28,
+                    duration: 15,
                     repeat: Infinity,
                     ease: "easeInOut",
                 }}
             />
 
-            {/* Noise overlay (clave para que no se vea plano) */}
-            <div className="absolute inset-0 bg-[url('/fondo.svg')] opacity-50 mix-blend-overlay" />
+            <motion.div
+                className="absolute right-[-100px] top-1/2 w-[550px] h-[550px] bg-indigo-500 rounded-full blur-[130px] opacity-35"
+                animate={{
+                    x: [200, -180, 120, -100, 80, 200],
+                    y: [-100, 180, -80, 120, -60, -100],
+                    rotate: [0, -10, 8, -15, 5, 0],
+                    scale: [1, 1.05, 0.95, 1.1, 1, 1],
+                }}
+                transition={{
+                    duration: 15,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                }}
+            />
+
         </div>
     )
 }
