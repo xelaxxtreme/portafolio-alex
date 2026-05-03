@@ -4,6 +4,7 @@ import CalendarGithub from "./components/CalendarGithub";
 import Background from "./components/Background";
 import Skills from "./components/Skills";
 import Proyects from "./components/Proyects";
+import Contact from "./components/Contact";
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <CalendarGithub />
       <Skills />
       <Proyects />
+      <Contact />
     </div>
   );
 }

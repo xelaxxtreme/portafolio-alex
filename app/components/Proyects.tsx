@@ -2,49 +2,105 @@
 
 import Image from "next/image";
 import { JSX } from "react"
-import { SiReact, SiNextdotjs, SiNodedotjs, SiFirebase } from "@icons-pack/react-simple-icons"
+import { SiReact, SiNextdotjs, SiJavascript, SiCss, SiTypescript, SiLaravel, SiNodedotjs, SiHtml5, SiSequelize, SiFirebase, SiGooglecloudstorage, SiPhp, SiVite, SiTailwindcss, SiMysql } from "@icons-pack/react-simple-icons"
 
 type Project = {
   title: string;
   description: string;
-  image: string;
+  images: string[]; // 👈 ahora es array
   date: string;
   tech: { icon: JSX.Element; name: string }[];
 };
 
 const projects: Project[] = [
   {
-    title: "Sistema de Gestión",
+    title: "Sistema de Administracion para agencias de viajes",
     description:
-      "Aplicación web para gestión de usuarios y tareas con autenticación y dashboard interactivo.",
-    image: "/projects/project1.jpg",
-    date: "2024",
+      "Aplicación web para gestión de productos en agencias de viajes, tours, paquetes, blog, usuarios, roles, reservas y comentarios.",
+    images: [
+      "/projects/project1-1.jpg",
+      "/projects/project1-2.jpg",
+      "/projects/project1-3.jpg",
+    ],
+    date: "2025-2026",
     tech: [
+      { icon: <SiHtml5 />, name: "Html5" },
       { icon: <SiReact />, name: "React" },
-      { icon: <SiNodedotjs />, name: "Node.js" },
-      { icon: <SiFirebase />, name: "Firebase" },
+      { icon: <SiNextdotjs />, name: "Next.js" },
+      { icon: <SiVite />, name: "Vite" },
+      { icon: <SiTailwindcss />, name: "Tailwindcss" },
+      { icon: <SiTypescript />, name: "Typescript" },
+      { icon: <SiJavascript />, name: "Javascript" },
+      { icon: <SiPhp />, name: "Php" },
+      { icon: <SiMysql />, name: "Mysql" },
     ],
   },
   {
-    title: "App Mobile Delivery",
+    title: "ERP para Colegios",
     description:
-      "Aplicación móvil para pedidos en tiempo real con integración de APIs y notificaciones.",
-    image: "/projects/project2.jpg",
+      "Sistema Web para administracion de Colegios, control de pagos, usuarios, roles, permisos y alumnos.",
+    images: [
+      "/projects/project1-1.jpg",
+      "/projects/project1-2.jpg",
+      "/projects/project1-3.jpg",
+    ],
     date: "2023",
     tech: [
-      { icon: <SiReact />, name: "React Native" },
-      { icon: <SiFirebase />, name: "Firestore" },
+      { icon: <SiHtml5 />, name: "Html5" },
+      { icon: <SiReact />, name: "React" },
+      { icon: <SiVite />, name: "Vite" },
+      { icon: <SiCss />, name: "CSS" },
+      { icon: <SiNodedotjs />, name: "Node.js" },
+      { icon: <SiSequelize />, name: "Sequelize" },
+      { icon: <SiTypescript />, name: "Typescript" },
+      { icon: <SiJavascript />, name: "Javascript" },
+      { icon: <SiMysql />, name: "Mysql" },
     ],
   },
   {
-    title: "Landing Profesional",
+    title: "Sistema para control de Files en Agencias de viajes",
     description:
-      "Landing page optimizada para conversión con diseño moderno y alto rendimiento.",
-    image: "/projects/project3.jpg",
+      "Aplicación web para gestión de Files y creacion de brochures en agencias de viajes, usuarios, roles y servicios.",
+    images: [
+      "/projects/project1-1.jpg",
+      "/projects/project1-2.jpg",
+      "/projects/project1-3.jpg",
+    ],
     date: "2022",
     tech: [
-      { icon: <SiNextdotjs />, name: "Next.js" },
+      { icon: <SiHtml5 />, name: "Html5" },
       { icon: <SiReact />, name: "React" },
+      { icon: <SiVite />, name: "Vite" },
+      { icon: <SiCss />, name: "CSS" },
+      { icon: <SiPhp />, name: "Php" },
+      { icon: <SiLaravel />, name: "Laravel" },
+      { icon: <SiJavascript />, name: "Javascript" },
+      { icon: <SiMysql />, name: "Mysql" },
+    ],
+  },
+  {
+    title: "Aplicacion Web para control de asistencia docente en colegios",
+    description:
+      "Aplicación web para control de asistencia docente en colegios mediante codigos QR, generacion de reportes, usuarios, roles, permisos y alumnos.",
+    images: [
+      "/projects/project1-1.jpg",
+      "/projects/project1-2.jpg",
+      "/projects/project1-3.jpg",
+    ],
+    date: "2022",
+    tech: [
+      { icon: <SiHtml5 />, name: "Html5" },
+      { icon: <SiReact />, name: "React" },
+      { icon: <SiVite />, name: "Vite" },
+      { icon: <SiCss />, name: "CSS" },
+      { icon: <SiTypescript />, name: "Typescript" },
+      { icon: <SiJavascript />, name: "Javascript" },
+      { icon: <SiFirebase />, name: "Firebase" },
+      { icon: <SiGooglecloudstorage />, name: "Google Cloud Storage" },
+      { icon: <SiNodedotjs />, name: "Node.js" },
+
+
+
     ],
   },
 ];
@@ -72,11 +128,18 @@ export default function Projects() {
               {/* Imagen */}
               <div className="relative h-48 w-full overflow-hidden">
                 <Image
-                  src={project.image}
+                  src={project.images[0]} // 👈 imagen principal
                   alt={project.title}
                   fill
                   className="object-cover group-hover:scale-105 transition duration-300"
                 />
+
+                {/* Indicador de múltiples imágenes */}
+                {project.images.length > 1 && (
+                  <div className="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded">
+                    +{project.images.length - 1}
+                  </div>
+                )}
               </div>
 
               {/* Contenido */}
@@ -87,9 +150,9 @@ export default function Projects() {
                   <h3 className="text-white font-medium text-lg">
                     {project.title}
                   </h3>
-                  <span className="text-xs text-white/50">
+                  {/* <span className="text-xs text-white/50">
                     {project.date}
-                  </span>
+                  </span> */}
                 </div>
 
                 {/* Descripción */}
