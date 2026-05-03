@@ -63,7 +63,7 @@ export default function CalendarGithub() {
     };
 
     return (
-        <div className="w-full flex flex-col items-center gap-6 mt-15">
+        <div className="w-full flex flex-col items-center gap-6 mt-12">
 
             {/* Título */}
             <h2 className="text-white text-2xl font-semibold tracking-tight">

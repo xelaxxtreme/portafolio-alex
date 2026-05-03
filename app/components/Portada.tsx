@@ -18,7 +18,7 @@ import {
 
 const Portada = () => {
     return (
-        <section className="relative flex flex-col items-center justify-center text-white px-6 pt-32 overflow-hidden">
+        <section className="relative flex flex-col items-center justify-center text-white px-6 pt-24 overflow-hidden">
 
             {/* 🔥 Fondo PRO */}
 
@@ -26,7 +26,7 @@ const Portada = () => {
             <div className="max-w-7xl text-center flex flex-col items-center">
 
                 {/* Logo */}
-                <div className="mb-6 relative">
+                <div className=" relative">
                     <div className="absolute inset-0 bg-linear-to-r from-green-800 to-blue-800 blur-2xl opacity-30 rounded-full" />
                     <Image src="/icono.png" alt="logo" width={350} height={350} className="relative" />
                 </div>
@@ -40,7 +40,7 @@ const Portada = () => {
                 </h1>
 
                 {/* Descripción */}
-                <div className="mt-10 max-w-5xl">
+                <div className="mt-5 max-w-5xl">
                     <p className="text-white/90 text-xl leading-relaxed font-light">
                         Soy <span className="font-bold text-white">Desarrollador de Software</span> desde 2020,
                         con experiencia en entornos freelance y empresariales.
@@ -90,7 +90,7 @@ const Portada = () => {
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 hover:bg-cyan-500/20 transition"
                         >
-                            <p className="text-lg font-bold px-1 py-0 border border-solid rounded-xs">in</p>
+                            <p className="text-sm font-bold px-1 py-0 border border-solid rounded-sm">in</p>
                             <p>LinkedIn</p>
                         </a>
 

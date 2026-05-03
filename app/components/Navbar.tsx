@@ -48,7 +48,7 @@ export default function Navbar() {
                         'rounded-2xl px-6 py-2 flex items-center gap-6 border transition-all duration-300',
                         isScrolled
                             ? 'bg-black/40 backdrop-blur-md border-white/10 shadow-xl'
-                            : 'bg-black/20 backdrop-blur-sm border-white/5'
+                            : 'bg-black/20 backdrop-blur-sm border-white/20'
                     )}
                 >
                     {/* LOGO */}
