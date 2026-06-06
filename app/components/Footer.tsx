@@ -26,7 +26,7 @@ export default function Footer() {
       <div className="relative overflow-hidden max-w-7xl mx-auto rounded-t-[40px] border border-white/10 bg-[#0B0B0C]">
 
         {/* Glow */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-cyan-500/20 blur-[140px] pointer-events-none" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-125 h-75 bg-cyan-500/20 blur-[140px] pointer-events-none" />
 
         <div className="relative z-10 px-6 md:px-12 lg:px-20 py-16">
 
@@ -140,11 +140,11 @@ export default function Footer() {
           {/* BOTTOM */}
           <div className="mt-16 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
 
-            <p className="text-sm text-neutral-500">
+            <p className="text-sm text-neutral-200">
               © 2026 Alex Delacruz Quispe
             </p>
 
-            <p className="text-sm text-neutral-600">
+            <p className="text-sm text-neutral-200">
               Diseñado con café y bugs ☕
             </p>
 
@@ -163,7 +163,7 @@ export default function Footer() {
               leading-none
               bg-clip-text
               bg-linear-to-b
-              from-white/10
+              from-white/60
               to-white/0
             ">
               ALEXDEV
@@ -194,7 +194,7 @@ function SocialLink({
         border border-white/10
         bg-white/5
         flex items-center justify-center
-        text-white/70
+        text-white
         hover:text-white
         hover:border-cyan-400/40
         hover:bg-cyan-400/10

@@ -19,7 +19,7 @@ import {
 
 const Portada = () => {
     return (
-        <section className="relative flex flex-col items-center justify-center text-white px-6 pt-24 overflow-hidden">
+        <section id="about" className="relative flex flex-col items-center justify-center text-white px-6 pt-24 overflow-hidden">
 
             {/* 🔥 Fondo PRO */}
 
