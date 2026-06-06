@@ -107,7 +107,7 @@ const projects: Project[] = [
 
 export default function Projects() {
   return (
-    <section className="w-full flex justify-center px-4 py-16">
+    <section id="projects" className="w-full flex justify-center px-4 py-16">
       <div className="max-w-6xl w-full">
 
         {/* Título */}

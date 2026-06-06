@@ -36,7 +36,7 @@ const categories: SkillCategory[] = [
 
 export default function Skills() {
     return (
-        <section className="w-full flex justify-center px-4 py-16">
+        <section id="skills" className="w-full flex justify-center px-4 py-16">
             <div className="max-w-5xl w-full text-center">
 
                 <h2 className="text-3xl md:text-4xl font-semibold text-white tracking-tight">
