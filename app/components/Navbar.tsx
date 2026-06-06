@@ -14,7 +14,6 @@ const navLinks: NavLink[] = [
     { label: 'Sobre mí', href: '#about' },
     { label: 'Skills', href: '#skilss' },
     { label: 'Proyectos', href: '#projects' },
-    { label: 'Contacto', href: '#contact' },
 ]
 
 export default function Navbar() {
@@ -68,8 +67,7 @@ export default function Navbar() {
 
                     {/* CTA */}
                     <div className="hidden md:flex gap-2 ml-auto">
-                        <Button variant="ghost">Contacto</Button>
-                        <Button variant="primary">Ver Proyectos</Button>
+                        <Button variant="primary">Contacto</Button>
                     </div>
 
                     {/* MOBILE TOGGLE */}
@@ -122,7 +120,7 @@ function NavItem({ label, href }: NavLink) {
             className="relative px-4 py-2 text-sm text-white/80 hover:text-white group"
         >
             {label}
-            <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-linear-to-r from-blue-500 to-cyan-500 transition-all group-hover:w-full" />
+            <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-linear-to-r from-blue-500 to-cyan-500 transition-all group-hover:w-full" />
         </Link>
     )
 }

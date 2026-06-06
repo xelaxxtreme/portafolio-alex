@@ -115,18 +115,18 @@ export default function Projects() {
           Proyectos
         </h2>
 
-        <div className="mt-4 mx-auto h-[2px] w-16 bg-cyan-400/60 rounded-full" />
+        <div className="mt-4 mx-auto h-0.5 w-16 bg-cyan-400/60 rounded-full" />
 
         {/* Grid */}
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <div
               key={project.title}
-              className="group rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur hover:bg-white/10 transition"
+              className="group rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur hover:bg-white/10 transition hover:text-cyan-300"
             >
 
               {/* Imagen */}
-              <div className="relative h-48 w-full overflow-hidden">
+              {/*<div className="relative h-48 w-full overflow-hidden">
                 <Image
                   src={project.images[0]} // 👈 imagen principal
                   alt={project.title}
@@ -134,20 +134,19 @@ export default function Projects() {
                   className="object-cover group-hover:scale-105 transition duration-300"
                 />
 
-                {/* Indicador de múltiples imágenes */}
                 {project.images.length > 1 && (
                   <div className="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded">
                     +{project.images.length - 1}
                   </div>
                 )}
-              </div>
+              </div>*/}
 
               {/* Contenido */}
               <div className="p-5 flex flex-col gap-3">
 
                 {/* Título + fecha */}
                 <div className="flex justify-between items-center">
-                  <h3 className="text-white font-medium text-lg">
+                  <h3 className=" font-medium text-lg">
                     {project.title}
                   </h3>
                   {/* <span className="text-xs text-white/50">

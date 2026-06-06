@@ -1,111 +1,207 @@
-import React from 'react'
+'use client'
+
 import Image from 'next/image'
+import Link from 'next/link'
+import {
+  SiGithub,
+  SiGmail,
+} from "@icons-pack/react-simple-icons";
+import {
+    SiReact,
+    SiTypescript,
+    SiNextdotjs,
+    SiPhp,
+    SiJavascript,
+    SiHtml5,
+    SiKotlin,
+    SiFiles,
+    SiGooglemaps,
+    SiWhatsapp
+} from "@icons-pack/react-simple-icons"
 
-const Footer = () => {
-    return (
-        <>
-            <style>
-                {`
-                    @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
-                    *{
-                        font-family: "Geist", sans-serif;
-                    }
-                `}
-            </style>
-            <div className=' pt-20 px-4'>
-                <footer className="bg-[#131314] w-full max-w-[1350px] mx-auto text-white pt-8 lg:pt-12 px-4 sm:px-8 md:px-16 lg:px-28 rounded-tl-3xl rounded-tr-3xl overflow-hidden">
-                    <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-6 gap-8 md:gap-12">
 
-                        <div className="lg:col-span-3 space-y-6">
-                            <div className='flex '>
-                                <Image src="/icono.png" alt="" width={150} height={150} />
-                            </div>
-                            <p className="text-sm/6 text-neutral-300 max-w-96">PrebuiltUI helps you build faster by transforming your design vision into fully functional, production-ready UI components.</p>
-                            <div className="flex gap-5 md:gap-6 order-1 md:order-2">
-                                {/* X (Twitter) */}
-                                <a href="#" className="text-white hover:text-gray-300">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
-                                    </svg>
-                                </a>
-                                {/* Github */}
-                                <a href="#" className="text-white hover:text-gray-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" /><path d="M9 18c-4.51 2-5-2-7-2" />
-                                    </svg>
-                                </a>
-                                {/* Linkedin */}
-                                <a href="#" className="text-white hover:text-gray-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" />
-                                    </svg>
-                                </a>
-                                {/* Youtube */}
-                                <a href="#" className="text-white hover:text-gray-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" /><path d="m10 15 5-3-5-3z" />
-                                    </svg>
-                                </a>
-                                {/* Instagram */}
-                                <a href="#" className="text-white hover:text-gray-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg>
-                                </a>
-                            </div>
-                        </div>
+export default function Footer() {
+  return (
+    <footer className="relative mt-32 px-4">
+      <div className="relative overflow-hidden max-w-7xl mx-auto rounded-t-[40px] border border-white/10 bg-[#0B0B0C]">
 
-                        <div className="lg:col-span-3 grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 lg:gap-28 items-start">
-                            {/* Products */}
-                            <div>
-                                <h3 className="font-medium text-sm mb-4">Products</h3>
-                                <ul className="space-y-3 text-sm text-neutral-300">
-                                    <li><a href="#" className="hover:text-neutral-400">Components</a></li>
-                                    <li><a href="#" className="hover:text-neutral-400">Templates</a></li>
-                                    <li><a href="#" className="hover:text-neutral-400">Icons</a></li>
-                                </ul>
-                            </div>
+        {/* Glow */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-cyan-500/20 blur-[140px] pointer-events-none" />
 
-                            {/* Resources */}
-                            <div>
-                                <h3 className="font-medium text-sm mb-4">Resources</h3>
-                                <ul className="space-y-3 text-sm text-neutral-300">
-                                    <li><a href="#" className="hover:text-neutral-400">PrebuiltUI</a></li>
-                                    <li><a href="#" className="hover:text-neutral-400">Templates</a></li>
-                                    <li><a href="#" className="hover:text-neutral-400">Components</a></li>
-                                    <li><a href="#" className="hover:text-neutral-400">Blogs</a></li>
-                                    <li><a href="#" className="hover:text-neutral-400">Store</a></li>
-                                </ul>
-                            </div>
+        <div className="relative z-10 px-6 md:px-12 lg:px-20 py-16">
 
-                            {/* Company */}
-                            <div className="col-span-2 md:col-span-1">
-                                <h3 className="font-medium text-sm mb-4">Company</h3>
-                                <ul className="space-y-3 text-sm text-neutral-300">
-                                    <li><a href="#" className="hover:text-neutral-400">About</a></li>
-                                    <li><a href="#" className="hover:text-neutral-400">Vision</a></li>
-                                    <li className="flex items-center gap-2">
-                                        <a href="#" className="hover:text-neutral-400">Careers</a>
-                                        <span className="text-[11px] px-2 py-0.5 rounded-full bg-green-950 border border-green-300 text-green-300">HIRING</span>
-                                    </li>
-                                    <li><a href="#" className="hover:text-neutral-400">Privacy policy</a></li>
-                                    <li><a href="#" className="hover:text-neutral-400">Contact Us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+          {/* TOP */}
+          <div className="flex flex-col lg:flex-row justify-between gap-16">
 
-                    <div className="max-w-7xl mx-auto mt-12 pt-4 border-t border-neutral-700 flex justify-between items-center">
-                        <p className="text-neutral-400 text-sm">© 2026 Alex-Delacruz-Quispe</p>
-                    </div>
-                    <div className="relative">
-                        <div className="absolute inset-x-0 bottom-0 mx-auto w-full max-w-3xl h-full max-h-64 bg-green-500 rounded-full blur-[170px] pointer-events-none" />
-                        <h3 className="text-center font-extrabold leading-[0.7] text-transparent text-[clamp(3rem,15vw,15rem)] [-webkit-text-stroke:1px_#0D542B] mt-6" >
-                            Dev
-                        </h3>
-                    </div>
-                </footer>
+            {/* LEFT */}
+            <div className="max-w-md">
+              <Image
+                src="/icono.png"
+                alt="Logo"
+                width={90}
+                height={90}
+                className="mb-6"
+              />
+
+              <h2 className="text-3xl font-bold text-white leading-tight">
+                Construyendo experiencias digitales modernas.
+              </h2>
+
+             
+
+              {/* SOCIALS */}
+              <div className="flex items-center gap-4 mt-8">
+                <a 
+                            href="mailto:my.wab.alex@gmail.com?subject=Hola&body=Me gustaría hablar contigo sobre..."
+                            className="flex cursor-pointer items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 hover:bg-cyan-500/20 transition"
+                            >
+                            <SiGmail />
+                        </a>
+
+                        <button 
+                            onClick={() => {
+                                const link = document.createElement('a');
+                                link.href = '/AlexDelaCruzCV.pdf';
+                                link.download = 'AlexDelaCruzCV.pdf';
+                                document.body.appendChild(link);
+                                link.click();
+                                document.body.removeChild(link);
+                            }}
+                            className="flex cursor-pointer items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 hover:bg-cyan-500/20 transition"
+                            >
+                            <SiFiles />
+                        </button>
+
+                        <a
+                            href="https://github.com/xelaxxtreme/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 hover:bg-cyan-500/20 transition"
+                        >
+                            <SiGithub />
+                        </a>
+
+                        <a
+                            href="https://wa.me/51927406750?text=Hola,%20me%20gustaría%20hablar%20contigo"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 hover:bg-cyan-500/20 transition"
+                            >
+                            <SiWhatsapp/>
+                        </a>
+
+                {/*<SocialLink href="#">
+                  <SiGithub size={18} />
+                </SocialLink>
+
+                <SocialLink href="#">
+                    <p className="text-sm font-bold px-1 py-0 border border-solid rounded-sm">in</p>
+                </SocialLink>
+
+                <SocialLink href="#">
+                  <SiGmail size={18} />
+                </SocialLink>
+*/}
+              </div>
             </div>
-        </>
-    )
+
+            {/* RIGHT */}
+            {/*<div className="grid grid-cols-2 gap-12 text-sm">
+
+              <div>
+                <h3 className="text-white font-semibold mb-5">
+                  Navegación
+                </h3>
+
+                <ul className="space-y-3 text-neutral-400">
+                  <li><Link href="#home">Inicio</Link></li>
+                  <li><Link href="#projects">Proyectos</Link></li>
+                  <li><Link href="#about">Sobre mí</Link></li>
+                  <li><Link href="#contact">Contacto</Link></li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-white font-semibold mb-5">
+                  Stack
+                </h3>
+
+                <ul className="space-y-3 text-neutral-400">
+                  <li>Next.js</li>
+                  <li>TypeScript</li>
+                  <li>TailwindCSS</li>
+                  <li>Node.js</li>
+                </ul>
+              </div>
+
+            </div>*/}
+          </div>
+
+          {/* BOTTOM */}
+          <div className="mt-16 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+
+            <p className="text-sm text-neutral-500">
+              © 2026 Alex Delacruz Quispe
+            </p>
+
+            <p className="text-sm text-neutral-600">
+              Diseñado con café y bugs ☕
+            </p>
+
+          </div>
+
+          {/* HUGE TEXT */}
+          <div className="relative mt-20">
+
+            <h1 className="
+              text-center
+              font-black
+              uppercase
+              tracking-tight
+              text-transparent
+              text-[clamp(4rem,15vw,14rem)]
+              leading-none
+              bg-clip-text
+              bg-linear-to-b
+              from-white/10
+              to-white/0
+            ">
+              ALEXDEV
+            </h1>
+
+          </div>
+
+        </div>
+      </div>
+    </footer>
+  )
 }
 
-export default Footer
+function SocialLink({
+  children,
+  href,
+}: {
+  children: React.ReactNode
+  href: string
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      className="
+        w-10 h-10
+        rounded-xl
+        border border-white/10
+        bg-white/5
+        flex items-center justify-center
+        text-white/70
+        hover:text-white
+        hover:border-cyan-400/40
+        hover:bg-cyan-400/10
+        transition-all duration-300
+      "
+    >
+      {children}
+    </a>
+  )
+}
