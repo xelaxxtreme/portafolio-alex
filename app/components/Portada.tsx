@@ -12,7 +12,8 @@ import {
     SiGithub,
     SiFiles,
     SiGooglemaps,
-    SiGmail
+    SiGmail,
+    SiWhatsapp
 } from "@icons-pack/react-simple-icons"
 
 
@@ -64,18 +65,31 @@ const Portada = () => {
                     {/* Botones */}
                     <div className="flex flex-wrap justify-center gap-3">
 
-                        <button className="flex cursor-pointer items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 hover:bg-cyan-500/20 transition">
+                        <a 
+                            href="mailto:my.wab.alex@gmail.com?subject=Hola&body=Me gustaría hablar contigo sobre..."
+                            className="flex cursor-pointer items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 hover:bg-cyan-500/20 transition"
+                            >
                             <SiGmail />
                             Contáctame
-                        </button>
+                        </a>
 
-                        <button className="flex cursor-pointer items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 hover:bg-cyan-500/20 transition">
+                        <button 
+                            onClick={() => {
+                                const link = document.createElement('a');
+                                link.href = '/AlexDelaCruzCV.pdf';
+                                link.download = 'AlexDelaCruzCV.pdf';
+                                document.body.appendChild(link);
+                                link.click();
+                                document.body.removeChild(link);
+                            }}
+                            className="flex cursor-pointer items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 hover:bg-cyan-500/20 transition"
+                            >
                             <SiFiles />
                             Curriculum
                         </button>
 
                         <a
-                            href="https://github.com/"
+                            href="https://github.com/xelaxxtreme/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 hover:bg-cyan-500/20 transition"
@@ -85,15 +99,16 @@ const Portada = () => {
                         </a>
 
                         <a
-                            href="https://linkedin.com/"
+                            href="https://wa.me/51927406750?text=Hola,%20me%20gustaría%20hablar%20contigo"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 hover:bg-cyan-500/20 transition"
-                        >
-                            <p className="text-sm font-bold px-1 py-0 border border-solid rounded-sm">in</p>
-                            <p>LinkedIn</p>
+                            >
+                            <SiWhatsapp/>
+                            <p>927406750</p>
                         </a>
 
+                            {/*<p className="text-sm font-bold px-1 py-0 border border-solid rounded-sm">in</p>*/}
                     </div>
                 </div>
 
