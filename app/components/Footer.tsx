@@ -153,7 +153,7 @@ export default function Footer() {
           {/* HUGE TEXT */}
           <div className="relative mt-20">
 
-            <h1 className="
+            <h2 className="
               text-center
               font-black
               uppercase
@@ -166,8 +166,8 @@ export default function Footer() {
               from-white/60
               to-white/0
             ">
-              ALEXDEV
-            </h1>
+              AlexDEV
+            </h2>
 
           </div>
 
