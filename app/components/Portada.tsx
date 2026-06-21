@@ -21,8 +21,6 @@ const Portada = () => {
     return (
         <section id="about" className="relative flex flex-col items-center justify-center text-white px-6 pt-24 overflow-hidden">
 
-            {/* 🔥 Fondo PRO */}
-
 
             <div className="max-w-7xl text-center flex flex-col items-center">
 
