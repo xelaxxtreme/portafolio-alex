@@ -63,15 +63,15 @@ const Portada = () => {
                     {/* Botones */}
                     <div className="flex flex-wrap justify-center gap-3">
 
-                        <a 
+                        <a
                             href="mailto:my.wab.alex@gmail.com?subject=Hola&body=Me gustaría hablar contigo sobre..."
                             className="flex cursor-pointer items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 hover:bg-cyan-500/20 transition"
-                            >
+                        >
                             <SiGmail />
                             Contáctame
                         </a>
 
-                        <button 
+                        <button
                             onClick={() => {
                                 const link = document.createElement('a');
                                 link.href = '/AlexDelaCruzCV.pdf';
@@ -81,7 +81,7 @@ const Portada = () => {
                                 document.body.removeChild(link);
                             }}
                             className="flex cursor-pointer items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 hover:bg-cyan-500/20 transition"
-                            >
+                        >
                             <SiFiles />
                             Curriculum
                         </button>
@@ -101,14 +101,17 @@ const Portada = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 hover:bg-cyan-500/20 transition"
-                            >
-                            <SiWhatsapp/>
+                        >
+                            <SiWhatsapp />
                             <p>927406750</p>
                         </a>
 
-                            {/*<p className="text-sm font-bold px-1 py-0 border border-solid rounded-sm">in</p>*/}
+                        {/*<p className="text-sm font-bold px-1 py-0 border border-solid rounded-sm">in</p>*/}
                     </div>
                 </div>
+                {/* <div>
+
+                </div> */}
 
 
                 {/* <div className="flex gap-4 mt-10 flex-wrap justify-center">
